@@ -6,9 +6,9 @@ public class ObjectRemover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out Pipe pipe))
+        if (other.TryGetComponent(out Bullet bullet))
         {
-            _pool.PutObject(pipe);
+            bullet.Remove();
         }
     }
 }
